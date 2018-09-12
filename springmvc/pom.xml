@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.cu</groupId>
+		<artifactId>spring</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<artifactId>springmvc</artifactId>
+	<packaging>war</packaging>
+	<name>springmvc Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<spring-version>5.0.8.RELEASE</spring-version>
+		<servlet-version>3.1.0</servlet-version>
+	</properties>
+	<dependencies>
+	    <!-- Tomcat8默认使用的是Servlet3.1 Tomcat7默认使用的是Servlet3.0-->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${servlet-version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring-version}</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>springmvc</finalName>
+	</build>
+</project>
